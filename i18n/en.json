@@ -1,0 +1,16 @@
+{
+    "@metadata": {
+        "authors": [
+            "ihaveahax"
+        ]
+    },
+    "dwf-desc": "Download a file with a different name automatically while saving",
+    "dwf-extensionname": "Download With Filename",
+    "downloadwithfilename": "Download file with a specific filename",
+    "dwf-too-many": "Too many arguments were specified. Only the original File: page and the requested filename are needed (e.g. <code>$1/$2/$3</code>).",
+    "dwf-no-filename": "No download filename was specified. It needs to be specified after a second slash (e.g. <code>$1/$2/downloadfilename.$3</code>).",
+    "dwf-bad-req-filename": "The requested filename has characters that are not allowed. Only alphanumeric characters, plus space, dash, underscore, and period are allowed.",
+    "dwf-file-not-found": "[[:$1]] could not be found or is not a file.",
+    "dwf-file-too-large": "[[:$1]] is too large to be served in this method. The max size is $2 bytes and this file is $3 bytes.",
+    "dwf-help-no-args": "This extension lets you link to a file to download, but forcing it to have a different filename when saved. This works by setting the [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition Content-Disposition] header.\n\nSyntax: <code><nowiki>[[</nowiki>$1/''name of file page''/''filename to save as'']]</code>\n\nThe <code>File:</code> namespace prefix is not required.\n\nExample:\n* <code><nowiki>[[</nowiki>$1/File:My Picture.png/image.png]]</code> will download <code>File:My Picture.png</code> and be saved as <code>image.png</code>\n* <code><nowiki>[[</nowiki>$1/FooApplicationConfig.ini/config.ini]]</code> will download <code>File:FooApplicationConfig.xml</code> and be saved as <code>config.ini</code>\n* <code><nowiki>[[</nowiki>$1/FooBarModSettings-Version2.0.3.yml/Settings.yml]]</code> will download <code>File:FooBarModSettings-Version2.0.3.yml</code> and be saved as <code>Settings.yml</code>\n\nThe maximum file size that can be downloaded through this page is $2 bytes."
+}

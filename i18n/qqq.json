@@ -1,0 +1,16 @@
+{
+    "@metadata": {
+        "authors": [
+            "ihaveahax"
+        ]
+    },
+    "dwf-desc": "Description for the DownloadWithFilename extension",
+    "dwf-extensionname": "Name of the DownloadWithFilename extension",
+    "downloadwithfilename": "Title of the Special:DownloadWithFilename page",
+    "dwf-too-many": "Used in case too many arguments were specified. Parameters\n* $1 - Name of special page (normally Special:DownloadWithFilename)\n* $2 - File page (includes File: prefix)\n* $3 - Requested file name",
+    "dwf-no-filename": "Used in case too few arguments were specified. Parameters\n* $1 - Name of special page (normally Special:DownloadWithFilename)\n* $2 - File page (includes File: prefix)\n* $3 - Extension of file page (defaults to bin if none was found)",
+    "dwf-bad-req-filename": "Used if the requested filename has illegal characters.",
+    "dwf-file-not-found": "Used in case the file doesn't exist or the page is not a file. Parameters\n* $1 - File page (includes namespace prefix)",
+    "dwf-file-too-large": "Used in case the file is larger than the limit. Parameters\n* $1 - File page (includes File: prefix)\n* $2 - Maximum size in bytes\n* $3 - File size in bytes",
+    "dwf-help-no-args": "Used in case no arguments were specified. Parameters\n* $1 - Name of special page (normally Special:DownloadWithFilename)\n* $2 - Maximum file size in bytes"
+}

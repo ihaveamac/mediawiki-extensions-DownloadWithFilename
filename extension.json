@@ -1,0 +1,38 @@
+{
+    "name": "DownloadWithFilename",
+    "namemsg": "dwf-extensionname",
+    "author": [
+        "ihaveahax"
+    ],
+    "url": "https://github.com/ihaveamac/mediawiki-extensions-DownloadWithFilename",
+    "description": "Download a file with a different name automatically while saving",
+    "descriptionmsg": "dwf-desc",
+    "license-name": "MIT",
+    "type": "specialpage",
+    "requires": {
+        "MediaWiki": ">= 1.37.0"
+    },
+    "AutoloadNamespaces": {
+        "MediaWiki\\Extension\\DownloadWithFilename\\": "includes/"
+    },
+    "config": {
+        "DWFMaxSize": {
+            "description": "Maximum size in bytes that a file can be downloaded through Special:DownloadWithFilename",
+            "value": 1048576
+        }
+    },
+    "SpecialPages": {
+        "DownloadWithFilename": {
+            "class": "MediaWiki\\Extension\\DownloadWithFilename\\SpecialDownloadWithFilename",
+            "services": [
+                "RepoGroup"
+            ]
+        }
+    },
+    "MessagesDirs": {
+        "DownloadWithFilename": [
+            "i18n"
+        ]
+    },
+    "manifest_version": 2
+}

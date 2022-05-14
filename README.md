@@ -10,6 +10,8 @@ This extension was made while learning how to make an extension for MediaWiki, a
 
 This extension currently does no permission checks at all. If you are using `img_auth.php` or another extension to control access to files, do not use this extension.
 
+Doesn't work with foreign file repos yet.
+
 Only tested for MediaWiki 1.37.
 
 ## Installation
@@ -23,7 +25,7 @@ Only tested for MediaWiki 1.37.
 
 ## Usage
 
-The process happens through the `Special:DownloadWithFile` special page.
+The process happens through the `Special:DownloadWithFilename` special page.
 
 Syntax: `[[Special:DownloadWithFilename/name of file page/filename to save as]]`
 
@@ -31,7 +33,7 @@ The `File:` namespace prefix is not required.
 
 Example:
 * `[[Special:DownloadWithFilename/File:My Picture.png/image.png]]` will download `File:My Picture.png` and be saved as `image.png`
-* `[[Special:DownloadWithFilename/FooApplicationConfig.ini/config.ini]]` will download `File:FooApplicationConfig.xml` and be saved as `config.ini`
+* `[[Special:DownloadWithFilename/FooApplicationConfig.ini/config.ini]]` will download `File:FooApplicationConfig.ini` and be saved as `config.ini`
 * `[[Special:DownloadWithFilename/FooBarModSettings-Version2.0.3.yml/Settings.yml]]` will download `File:FooBarModSettings-Version2.0.3.yml` and be saved as `Settings.yml`
 
 ## Configuration parameters

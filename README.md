@@ -10,7 +10,7 @@ This extension was made while learning how to make an extension for MediaWiki, a
 
 This extension currently does no permission checks at all. If you are using `img_auth.php` or another extension to control access to files, do not use this extension.
 
-Doesn't work with foreign file repos yet.
+Doesn't work with foreign file repos yet (like Wikimedia Commons).
 
 Only tested for MediaWiki 1.37.
 

@@ -28,6 +28,7 @@ class SpecialDownloadWithFilename extends \SpecialPage {
 		}
 		$parts = explode( "/", $subPage );
 		if ( count( $parts ) > 2 ) {
+			$this->setHeaders();
 			$output->showErrorPage( 'error', 'dwf-too-many', [
 				$this->getPageTitle( false )->getFullText(),
 				$parts[0],
@@ -36,6 +37,7 @@ class SpecialDownloadWithFilename extends \SpecialPage {
 
 			return;
 		} elseif ( count( $parts ) < 2 ) {
+			$this->setHeaders();
 			$ext = pathinfo( $parts[0], PATHINFO_EXTENSION );
 			if ( !$ext ) {
 				$ext = 'bin';
@@ -57,6 +59,7 @@ class SpecialDownloadWithFilename extends \SpecialPage {
 		$reqFilenameS = preg_replace( $allowedCharacters, "", $reqFilename );
 
 		if ( $reqFilenameS !== $reqFilename ) {
+			$this->setHeaders();
 			$output->showErrorPage( 'error', 'dwf-bad-req-filename' );
 
 			return;
@@ -64,6 +67,7 @@ class SpecialDownloadWithFilename extends \SpecialPage {
 
 		$title = Title::newFromText( $origFilename, NS_FILE );
 		if ( !$title->inNamespace( NS_FILE ) ) {
+			$this->setHeaders();
 			$output->showErrorPage( 'error', 'dwf-file-not-found', [ $title->getFullText() ] );
 
 			return;
@@ -71,12 +75,14 @@ class SpecialDownloadWithFilename extends \SpecialPage {
 		$file = $this->repoGroup->findFile( $title );
 
 		if ( $file === false ) {
+			$this->setHeaders();
 			$output->showErrorPage( 'error', 'dwf-file-not-found', [ $title->getFullText() ] );
 
 			return;
 		}
 
 		if ( $file->getSize() > $maxSize ) {
+			$this->setHeaders();
 			$output->showErrorPage( 'error', 'dwf-file-too-large', [
 				$title->getFullText(),
 				$maxSize,
